@@ -52,7 +52,8 @@ export default function Featured() {
               loop 
               muted 
               playsInline
-              className="absolute inset-0 w-full h-full object-cover z-0" 
+              preload="metadata"
+              className="absolute inset-0 w-full h-full object-cover z-0 transform-gpu" 
             />
 
             {/* Overlay layers */}
