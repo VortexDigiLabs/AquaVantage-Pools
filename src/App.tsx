@@ -5,7 +5,6 @@
 
 import Header from './components/Header';
 import Hero from './components/Hero';
-import ServiceMatrix from './components/ServiceMatrix';
 import Featured from './components/Featured';
 import Process from './components/Process';
 import Packages from './components/Packages';
@@ -20,7 +19,6 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ServiceMatrix />
         <Featured />
         <Process />
         <Packages />

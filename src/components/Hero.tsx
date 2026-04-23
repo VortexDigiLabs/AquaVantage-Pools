@@ -4,7 +4,7 @@ import { Crosshair, RefreshCcw, Droplets } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-x-clip flex items-center pt-[120px] pb-[80px]">
+    <section className="relative min-h-[100svh] overflow-x-clip flex items-center pt-[120px] pb-[40px]">
       {/* Video Background */}
       <video 
         src="https://bxmgsjtsxygxfgvpnnjh.supabase.co/storage/v1/object/public/PoolWebsite%20Template/Swimmer%201%20WebM.webm" 
@@ -75,8 +75,8 @@ export default function Hero() {
               <a href="#contact" className="bg-brand-gold text-white px-[26px] py-3 rounded-full text-[13px] font-medium tracking-[0.06em] border border-brand-gold transition-all duration-300 hover:bg-[#b89055] hover:border-[#b89055] hover:-translate-y-[2px] hover:shadow-[0_8px_24px_rgba(201,169,106,0.4)]">
                 Request a Contractor Demo
               </a>
-              <a href="#services" className="border border-white/40 text-white bg-transparent px-[26px] py-3 rounded-full text-[13px] font-medium tracking-[0.06em] transition-all duration-300 hover:bg-white/10 hover:border-white hover:-translate-y-[2px]">
-                Explore Services
+              <a href="#process" className="border border-white/40 text-white bg-transparent px-[26px] py-3 rounded-full text-[13px] font-medium tracking-[0.06em] transition-all duration-300 hover:bg-white/10 hover:border-white hover:-translate-y-[2px]">
+                View Our Process
               </a>
             </motion.div>
           </div>

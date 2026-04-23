@@ -23,7 +23,6 @@ export default function Header() {
   }, [menuOpen]);
 
   const navLinks = [
-    { name: 'Services', href: '#services' },
     { name: 'Process', href: '#process' },
     { name: 'Packages', href: '#packages' },
     { name: 'Results', href: '#testimonials' },
