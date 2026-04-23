@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:ital,wght@0,400;0,500;0,900;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Pool Theme Colors */
+  --color-brand-navy: #0B4A71; 
+  --color-brand-deep: #16648E; 
+  --color-brand-aqua: #00E5FF;
+  --color-brand-aqua-light: #B3FAFF;
+  --color-brand-cyan: #46C0EB;
+  --color-brand-gold: #00E5FF; /* Keeping gold references alive but coloring them aqua */
+  --color-brand-cream: #F2F8FA;
+  --color-brand-ink: #FFFFFF;
+  --color-brand-grey: rgba(255, 255, 255, 0.7);
+  --color-brand-line: rgba(255, 255, 255, 0.15);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-brand-ink bg-brand-navy;
+    line-height: 1.65;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, .serif {
+    @apply font-display font-black tracking-[-0.01em] uppercase;
+    line-height: 1;
+  }
+  h3, h4 {
+    @apply text-[24px] tracking-normal;
+  }
+  .serif-italic {
+    @apply font-display font-black italic uppercase text-transparent;
+    -webkit-text-stroke: 1.5px #FFFFFF;
+  }
+  em.italic {
+    @apply font-black italic uppercase text-transparent;
+    -webkit-text-stroke: 1px #F5F5F0;
+    font-style: italic !important;
+  }
+}
+
+.eyebrow {
+  @apply text-[10px] uppercase tracking-[0.4em] font-bold text-brand-aqua block mb-2 relative;
+}
+.eyebrow::before {
+  content: '';
+  @apply absolute hidden md:block w-12 h-[1px] bg-brand-aqua top-[6px] -left-16;
+}
+
+.stroke-text {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.5px #FFFFFF;
+}
+
+/* Base custom styles translated from original CSS */
+.hero-gradient {
+  background: linear-gradient(180deg, #1fa2ff 0%, #12d8fa 40%, #0B4A71 80%, #052640 100%);
+}
+
+.sun-pulse {
+  animation: sunPulse 6s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+.shimmer-bg {
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.ripple-ring-anim {
+  animation: ripple 5s ease-out infinite;
+}
+
+@keyframes ripple {
+  0%   { width: 0; height: 0; opacity: 0.6; }
+  100% { width: 900px; height: 200px; opacity: 0; }
+}
+
+.ray-wave {
+  animation: rayWave 8s ease-in-out infinite;
+}
+
+@keyframes rayWave {
+  0%, 100% { opacity: var(--ro, 0.5); }
+  50% { opacity: calc(var(--ro, 0.5) * 0.4); }
+}
+
+.badge-float {
+  animation: badgeFloat 6s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.fade-up-down {
+  animation: fadeUpDown 2.5s ease-in-out infinite;
+}
+
+@keyframes fadeUpDown {
+  0%, 100% { opacity: 0.6; transform: translateX(-50%) translateY(0); }
+  50% { opacity: 1; transform: translateX(-50%) translateY(6px); }
+}
+
+.gold-badge-spin {
+  animation: rotateBadge 20s linear infinite;
+}
+
+@keyframes rotateBadge {
+  0% { box-shadow: 0 20px 40px rgba(10,39,64,0.3), 0 0 0 0px rgba(201,169,106,0); }
+  50% { box-shadow: 0 20px 40px rgba(10,39,64,0.3), 0 0 0 8px rgba(201,169,106,0.1); }
+  100% { box-shadow: 0 20px 40px rgba(10,39,64,0.3), 0 0 0 0px rgba(201,169,106,0); }
+}
+
+.bg-glow-pulse {
+  animation: glow 8s ease-in-out infinite;
+}
+
+.bg-glow-pulse-rev {
+  animation: glow 8s ease-in-out infinite reverse;
+}
+
+@keyframes glow {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
