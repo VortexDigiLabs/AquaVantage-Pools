@@ -74,8 +74,8 @@ export default function ServiceMatrix() {
           >
             {/* High-End Architectural Pool Background Image */}
             <img 
-              src="https://images.unsplash.com/photo-1576686121558-85412b18aa2c?q=80&w=2400&auto=format&fit=crop" 
-              alt="Premium Commercial Pool"
+              src="/commercial-routes-bg.png" 
+              alt="Commercial Routes Map"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]"
             />
             
