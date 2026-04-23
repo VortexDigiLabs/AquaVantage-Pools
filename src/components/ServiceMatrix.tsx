@@ -1,167 +1,219 @@
 import { motion } from 'motion/react';
-import { Droplets, Settings, Wrench, Wind } from 'lucide-react';
+import { Droplets, Settings, Wrench, Wind, Search, Beaker, ShieldCheck } from 'lucide-react';
 
 export default function ServiceMatrix() {
   const cards = [
     {
       id: "01",
-      icon: <Droplets className="text-brand-deep" size={20} strokeWidth={1.5} />,
+      icon: <Droplets className="text-brand-navy" size={20} strokeWidth={1.5} />,
       title: "Weekly Route Cleaning",
       desc: "Scheduled skimming, brushing, vacuuming and surface maintenance across recurring contractor routes."
     },
     {
       id: "02",
-      icon: <Settings className="text-brand-deep" size={20} strokeWidth={1.5} />,
+      icon: <Settings className="text-brand-navy" size={20} strokeWidth={1.5} />,
       title: "Pump & Motor Service",
       desc: "Bearing replacements, seal changes and full pump diagnostics with SABS-compliant componentry."
     },
     {
       id: "03",
-      icon: <Wrench className="text-brand-deep" size={20} strokeWidth={1.5} />,
+      icon: <Wrench className="text-brand-navy" size={20} strokeWidth={1.5} />,
       title: "Green Pool Recovery",
-      desc: "48–72 hour recovery protocols for neglected or algae-bound pools — ready for handover."
+      desc: "48–72 hour recovery protocols for neglected or algae-bound pools — ready for immediate handover."
     },
     {
       id: "04",
-      icon: <Wind className="text-brand-deep" size={20} strokeWidth={1.5} />,
-      title: "Filter & Chlorinator Care",
-      desc: "Media replacements, salt cell servicing and chlorinator calibration to spec and flow rate."
+      icon: <Wind className="text-brand-navy" size={20} strokeWidth={1.5} />,
+      title: "Filtration & Sand Service",
+      desc: "Media replacements, lateral inspections and filter deep-cleans to ensure optimal flow and clarity."
+    },
+    {
+      id: "05",
+      icon: <Search className="text-brand-navy" size={20} strokeWidth={1.5} />,
+      title: "Leak Detection & Repair",
+      desc: "Pressure testing and ultrasonic detection to isolate losses in suction or return lines with precision."
+    },
+    {
+      id: "06",
+      icon: <Beaker className="text-brand-navy" size={20} strokeWidth={1.5} />,
+      title: "Water Chemistry Control",
+      desc: "Precision balancing of pH, Alkalinity and Calcium Hardness for commercial safety and equipment longevity."
+    },
+    {
+      id: "07",
+      icon: <ShieldCheck className="text-brand-navy" size={20} strokeWidth={1.5} />,
+      title: "SANS 10134 Compliance",
+      desc: "Full-circle auditing and technical reporting to meet South African national standards for public pools."
     }
   ];
 
   return (
-    <section className="bg-brand-navy py-20 lg:py-24 relative overflow-hidden" id="services">
-      <div className="absolute top-[-1px] left-0 right-0 h-[120px] bg-gradient-to-b from-brand-deep to-transparent opacity-[0.4]" />
+    <section className="bg-brand-navy py-20 lg:py-32 relative overflow-hidden" id="services">
+      {/* Top Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-gradient-to-b from-brand-deep/30 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="text-center max-w-[720px] mx-auto mb-16">
+        <div className="text-center max-w-[800px] mx-auto mb-20">
           <motion.span 
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.75, ease: [0.22, 0.68, 0, 1.2] }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
             className="eyebrow"
           >
             The Contractor Service Matrix
           </motion.span>
           <motion.h2 
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.75, delay: 0.05, ease: [0.22, 0.68, 0, 1.2] }}
-            className="text-[clamp(36px,4.2vw,58px)] leading-tight text-brand-navy my-4"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-[clamp(32px,4vw,54px)] text-white mt-4 mb-6 leading-[1.1]"
           >
             A full-circle maintenance <span className="serif-italic">programme</span>
           </motion.h2>
           <motion.p 
-            initial={{ opacity: 0, y: 36 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}
-            className="text-brand-grey text-[16px] font-light leading-relaxed max-w-[620px] mx-auto"
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-white/60 text-[16px] font-light leading-relaxed max-w-[640px] mx-auto"
           >
-            Seven integrated disciplines — engineered for contractors who manage recurring routes, commercial portfolios, and high-expectation clientele across Gauteng, Western Cape and KwaZulu-Natal.
+            Seven integrated disciplines engineered for commercial contractors managing high-frequency routes and technical portfolios.
           </motion.p>
         </div>
 
-        <div className="relative max-w-[1100px] mx-auto w-full">
+        {/* Commercial Routes Interactive Map */}
+        <div className="relative max-w-[1100px] mx-auto w-full group">
           <motion.div 
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.75, ease: [0.22, 0.68, 0, 1.2] }}
-            className="relative w-full rounded-[24px] overflow-hidden hidden md:block aspect-[2.2/1] shadow-[0_20px_60px_rgba(10,39,64,0.3)] mt-12 mb-16 group"
+            initial={{ opacity: 0, scale: 0.98 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="relative w-full aspect-[16/9] md:aspect-[2.4/1] rounded-[30px] overflow-hidden border border-white/10 shadow-[0_40px_80px_rgba(0,0,0,0.4)]"
           >
-            {/* High-End Architectural Pool Background Image */}
+            {/* Background Asset */}
             <img 
               src="/commercial-routes-bg.png" 
-              alt="Commercial Routes Map"
-              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-[1.03]"
+              alt="Premium Commercial Pool"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-110"
             />
             
-            {/* Cinematic Gradients for Contrast */}
-            <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply transition-opacity duration-1000 group-hover:opacity-80" />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,74,113,0.8)_0%,rgba(11,74,113,0.2)_50%,rgba(11,74,113,0.9)_100%)]" />
+            {/* Cinematic Overlays */}
+            <div className="absolute inset-0 bg-brand-navy/60 mix-blend-multiply" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-brand-navy/40" />
             
-            {/* Content Container */}
-            <div className="absolute inset-0 flex flex-col justify-between p-12">
+            {/* Top-Left Label */}
+            <div className="absolute top-8 left-8 flex items-center gap-3 opacity-40">
+              <div className="w-1 h-1 rounded-full bg-brand-aqua" />
+              <span className="text-[10px] tracking-[0.2em] uppercase font-bold text-white">Premium Commercial Pool</span>
+            </div>
+
+            {/* Title Section */}
+            <div className="absolute top-12 left-1/2 -translate-x-1/2 text-center z-20">
+              <h3 className="font-display text-[22px] md:text-[28px] text-white tracking-[0.3em] uppercase drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                Commercial Routes
+              </h3>
+              <motion.div 
+                initial={{ height: 0 }}
+                whileInView={{ height: 40 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, delay: 0.5 }}
+                className="w-[1px] bg-gradient-to-b from-brand-aqua to-transparent mx-auto mt-4" 
+              />
+            </div>
+
+            {/* Central Hub */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30">
+              <motion.div 
+                whileHover={{ scale: 1.05 }}
+                className="bg-brand-navy/30 backdrop-blur-2xl border border-white/20 w-[140px] h-[140px] md:w-[160px] md:h-[160px] rounded-full flex flex-col justify-center items-center text-center shadow-[0_0_50px_rgba(0,229,255,0.15),inset_0_0_20px_rgba(255,255,255,0.05)]"
+              >
+                <span className="font-display text-[48px] md:text-[54px] text-brand-aqua-light leading-none mb-1">07</span>
+                <span className="text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-black text-white/90 leading-tight">
+                  Service<br/>Pillars
+                </span>
+              </motion.div>
+            </div>
+
+            {/* Staggered Service Items - Left Side */}
+            <div className="absolute inset-0 z-20 hidden md:block">
+              {/* Item 1: Weekly Cleaning */}
+              <div className="absolute top-[55%] left-[12%] flex items-center gap-5 group/item cursor-pointer">
+                <div className="w-2 h-2 rounded-full bg-brand-aqua shadow-[0_0_15px_#00E5FF] transition-transform duration-300 group-hover/item:scale-150" />
+                <span className="text-[13px] tracking-[0.18em] font-bold uppercase text-white drop-shadow-md group-hover/item:text-brand-aqua transition-colors">Weekly Cleaning</span>
+              </div>
               
-              {/* Top Banner */}
-              <div className="text-center">
-                 <span className="font-serif text-[20px] text-white tracking-[0.2em] uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.5)]">Commercial Routes</span>
-                 <div className="w-[1px] h-8 bg-gradient-to-b from-brand-aqua to-transparent mx-auto mt-4 opacity-70" />
+              {/* Item 2: Pump Maintenance */}
+              <div className="absolute top-[68%] left-[16%] flex items-center gap-5 group/item cursor-pointer">
+                <div className="w-2 h-2 rounded-full bg-brand-aqua shadow-[0_0_15px_#00E5FF] transition-transform duration-300 group-hover/item:scale-150" />
+                <span className="text-[13px] tracking-[0.18em] font-bold uppercase text-white drop-shadow-md group-hover/item:text-brand-aqua transition-colors">Pump Maintenance</span>
               </div>
 
-              {/* Central Glass Badge */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-xl border border-white/20 p-6 rounded-full w-[140px] h-[140px] flex flex-col justify-center items-center text-white text-center shadow-[0_0_40px_rgba(255,255,255,0.1)_inset,0_20px_40px_rgba(0,0,0,0.4)] z-10 transition-all duration-500 hover:bg-white/20 hover:scale-105">
-                <span className="font-serif text-[42px] leading-none mb-1 text-brand-aqua-light drop-shadow-md">07</span>
-                <span className="text-[9px] uppercase tracking-[0.25em] font-bold text-white/80 drop-shadow-sm">Service<br/>Pillars</span>
-              </div>
-
-              {/* Service Pillars Layout - Symmetrical Grid Overlay */}
-              <div className="w-full flex justify-between items-end relative z-10">
-                
-                {/* Left Side Elements */}
-                <div className="flex flex-col gap-6">
-                  <div className="flex items-center gap-4 text-white hover:text-brand-aqua transition-colors cursor-pointer group/item">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua shadow-[0_0_10px_#00E5FF] group-hover/item:scale-150 transition-transform" />
-                    <span className="text-[12px] tracking-[0.15em] font-semibold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Weekly Cleaning</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-white hover:text-brand-aqua transition-colors cursor-pointer group/item translate-x-6">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua shadow-[0_0_10px_#00E5FF] group-hover/item:scale-150 transition-transform" />
-                    <span className="text-[12px] tracking-[0.15em] font-semibold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Pump Maintenance</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-white hover:text-brand-aqua transition-colors cursor-pointer group/item translate-x-10">
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua shadow-[0_0_10px_#00E5FF] group-hover/item:scale-150 transition-transform" />
-                    <span className="text-[12px] tracking-[0.15em] font-semibold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Green Pool Recovery</span>
-                  </div>
-                </div>
-
-                {/* Right Side Elements */}
-                <div className="flex flex-col gap-6 text-right items-end">
-                  <div className="flex items-center gap-4 text-white hover:text-brand-aqua transition-colors cursor-pointer group/item -translate-x-10">
-                    <span className="text-[12px] tracking-[0.15em] font-semibold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Filtration Service</span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua shadow-[0_0_10px_#00E5FF] group-hover/item:scale-150 transition-transform" />
-                  </div>
-                  <div className="flex items-center gap-4 text-white hover:text-brand-aqua transition-colors cursor-pointer group/item -translate-x-6">
-                    <span className="text-[12px] tracking-[0.15em] font-semibold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Leak Detection</span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua shadow-[0_0_10px_#00E5FF] group-hover/item:scale-150 transition-transform" />
-                  </div>
-                  <div className="flex items-center gap-4 text-white hover:text-brand-aqua transition-colors cursor-pointer group/item">
-                    <span className="text-[12px] tracking-[0.15em] font-semibold uppercase drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Water Balancing</span>
-                    <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua shadow-[0_0_10px_#00E5FF] group-hover/item:scale-150 transition-transform" />
-                  </div>
-                </div>
-
+              {/* Item 3: Green Pool Recovery */}
+              <div className="absolute top-[81%] left-[20%] flex items-center gap-5 group/item cursor-pointer">
+                <div className="w-2 h-2 rounded-full bg-brand-aqua shadow-[0_0_15px_#00E5FF] transition-transform duration-300 group-hover/item:scale-150" />
+                <span className="text-[13px] tracking-[0.18em] font-bold uppercase text-white drop-shadow-md group-hover/item:text-brand-aqua transition-colors">Green Pool Recovery</span>
               </div>
             </div>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-             {cards.map((card, idx) => (
-                <motion.div 
-                  key={card.id}
-                  initial={{ opacity: 0, y: 36 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.75, delay: idx * 0.1, ease: [0.22, 0.68, 0, 1.2] }}
-                  className="bg-brand-deep rounded-[18px] p-6 lg:p-[28px_24px] border border-brand-line transition-all duration-400 relative overflow-hidden group hover:-translate-y-1.5 hover:border-brand-aqua"
-                >
-                  <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-gradient-to-r from-brand-aqua to-brand-gold origin-left scale-x-0 transition-transform duration-400 group-hover:scale-x-100" />
-                  
-                  <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-cyan to-white flex items-center justify-center mb-4 transition-transform duration-400 group-hover:rotate-[10deg] group-hover:scale-[1.1]">
-                    {card.icon}
-                  </div>
-                  <span className="font-serif text-[14px] text-brand-gold tracking-[0.15em] italic">
-                    {card.id} —
-                  </span>
-                  <h4 className="text-[24px] mt-2 mb-2 text-brand-navy">{card.title}</h4>
-                  <p className="text-[13.5px] text-brand-grey font-light leading-relaxed">
-                    {card.desc}
-                  </p>
-                </motion.div>
-             ))}
-          </div>
+            {/* Staggered Service Items - Right Side */}
+            <div className="absolute inset-0 z-20 hidden md:block">
+              {/* Item 4: Filtration Service */}
+              <div className="absolute top-[55%] right-[12%] flex items-center flex-row-reverse gap-5 group/item cursor-pointer">
+                <div className="w-2 h-2 rounded-full bg-brand-aqua shadow-[0_0_15px_#00E5FF] transition-transform duration-300 group-hover/item:scale-150" />
+                <span className="text-[13px] tracking-[0.18em] font-bold uppercase text-white drop-shadow-md group-hover/item:text-brand-aqua transition-colors">Filtration Service</span>
+              </div>
+              
+              {/* Item 5: Leak Detection */}
+              <div className="absolute top-[68%] right-[16%] flex items-center flex-row-reverse gap-5 group/item cursor-pointer">
+                <div className="w-2 h-2 rounded-full bg-brand-aqua shadow-[0_0_15px_#00E5FF] transition-transform duration-300 group-hover/item:scale-150" />
+                <span className="text-[13px] tracking-[0.18em] font-bold uppercase text-white drop-shadow-md group-hover/item:text-brand-aqua transition-colors">Leak Detection</span>
+              </div>
+
+              {/* Item 6: Water Balancing */}
+              <div className="absolute top-[81%] right-[20%] flex items-center flex-row-reverse gap-5 group/item cursor-pointer">
+                <div className="w-2 h-2 rounded-full bg-brand-aqua shadow-[0_0_15px_#00E5FF] transition-transform duration-300 group-hover/item:scale-150" />
+                <span className="text-[13px] tracking-[0.18em] font-bold uppercase text-white drop-shadow-md group-hover/item:text-brand-aqua transition-colors">Water Balancing</span>
+              </div>
+            </div>
+
+            {/* Mobile View Indicators */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 md:hidden">
+              {[1, 2, 3, 4, 5, 6].map((i) => (
+                <div key={i} className="w-1.5 h-1.5 rounded-full bg-brand-aqua/40 shadow-[0_0_8px_#00E5FF]" />
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Detailed Service Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
+          {cards.map((card, idx) => (
+            <motion.div 
+              key={card.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: idx * 0.05 }}
+              className="bg-white/[0.03] border border-white/10 p-8 rounded-[24px] hover:bg-white/[0.06] hover:border-brand-aqua/30 transition-all duration-300 group relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 p-4 opacity-10 font-display text-[32px] group-hover:opacity-20 transition-opacity">
+                {card.id}
+              </div>
+              
+              <div className="w-12 h-12 rounded-2xl bg-brand-aqua flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(0,229,255,0.2)]">
+                {card.icon}
+              </div>
+              
+              <h4 className="text-[22px] text-white mb-3 tracking-tight group-hover:text-brand-aqua transition-colors">
+                {card.title}
+              </h4>
+              <p className="text-white/50 text-[14px] font-light leading-relaxed">
+                {card.desc}
+              </p>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
