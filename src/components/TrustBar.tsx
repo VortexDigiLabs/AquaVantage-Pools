@@ -35,7 +35,7 @@ function AnimatedCounter({ target, duration = 1800, decimal = 0, suffix = "", it
 
 export default function TrustBar() {
   return (
-    <section className="py-[60px] bg-brand-navy border-y border-brand-line">
+    <section className="py-[30px] bg-brand-navy border-y border-brand-line">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-[20px] md:gap-[40px] text-center">
         
         <motion.div 

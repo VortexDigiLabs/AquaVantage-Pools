@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Packages() {
   return (
-    <section className="py-20 lg:py-24 bg-brand-navy text-white relative overflow-hidden" id="packages">
+    <section className="py-12 lg:py-16 bg-brand-navy text-white relative overflow-hidden" id="packages">
       {/* Background glow effects */}
       <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle,rgba(255,75,0,0.2),transparent_70%)] bg-glow-pulse pointer-events-none" />
       <div className="absolute -bottom-[200px] -left-[100px] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(255,122,64,0.1),transparent_70%)] bg-glow-pulse-rev pointer-events-none" />

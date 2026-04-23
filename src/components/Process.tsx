@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Process() {
   return (
-    <section className="py-20 lg:py-24 relative overflow-hidden bg-brand-navy" id="process">
+    <section className="py-12 lg:py-16 relative overflow-hidden bg-brand-navy" id="process">
       {/* Video Background Layer rotated into landscape */}
       <div className="absolute inset-0 z-0 overflow-hidden flex items-center justify-center pointer-events-none">
         <video 

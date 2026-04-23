@@ -2,89 +2,14 @@ import { motion } from 'motion/react';
 import { Droplets, Settings, Wrench, Wind, Search, Beaker, ShieldCheck } from 'lucide-react';
 
 export default function ServiceMatrix() {
-  const cards = [
-    {
-      id: "01",
-      icon: <Droplets className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "Weekly Route Cleaning",
-      desc: "Scheduled skimming, brushing, vacuuming and surface maintenance across recurring contractor routes."
-    },
-    {
-      id: "02",
-      icon: <Settings className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "Pump & Motor Service",
-      desc: "Bearing replacements, seal changes and full pump diagnostics with SABS-compliant componentry."
-    },
-    {
-      id: "03",
-      icon: <Wrench className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "Green Pool Recovery",
-      desc: "48–72 hour recovery protocols for neglected or algae-bound pools — ready for immediate handover."
-    },
-    {
-      id: "04",
-      icon: <Wind className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "Filtration & Sand Service",
-      desc: "Media replacements, lateral inspections and filter deep-cleans to ensure optimal flow and clarity."
-    },
-    {
-      id: "05",
-      icon: <Search className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "Leak Detection & Repair",
-      desc: "Pressure testing and ultrasonic detection to isolate losses in suction or return lines with precision."
-    },
-    {
-      id: "06",
-      icon: <Beaker className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "Water Chemistry Control",
-      desc: "Precision balancing of pH, Alkalinity and Calcium Hardness for commercial safety and equipment longevity."
-    },
-    {
-      id: "07",
-      icon: <ShieldCheck className="text-brand-navy" size={20} strokeWidth={1.5} />,
-      title: "SANS 10134 Compliance",
-      desc: "Full-circle auditing and technical reporting to meet South African national standards for public pools."
-    }
-  ];
-
   return (
-    <section className="bg-brand-navy py-20 lg:py-32 relative overflow-hidden" id="services">
+    <section className="bg-brand-navy py-12 lg:py-16 relative overflow-hidden" id="services">
       {/* Top Background Glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-gradient-to-b from-brand-deep/30 to-transparent pointer-events-none" />
       
       <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
-        <div className="text-center max-w-[800px] mx-auto mb-20">
-          <motion.span 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="eyebrow"
-          >
-            The Contractor Service Matrix
-          </motion.span>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-[clamp(32px,4vw,54px)] text-white mt-4 mb-6 leading-[1.1]"
-          >
-            A full-circle maintenance <span className="serif-italic">programme</span>
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white/60 text-[16px] font-light leading-relaxed max-w-[640px] mx-auto"
-          >
-            Seven integrated disciplines engineered for commercial contractors managing high-frequency routes and technical portfolios.
-          </motion.p>
-        </div>
-
         {/* Commercial Routes Interactive Map */}
-        <div className="relative max-w-[1100px] mx-auto w-full group mt-12 mb-20">
+        <div className="relative max-w-[1100px] mx-auto w-full group">
           <motion.div 
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -185,35 +110,6 @@ export default function ServiceMatrix() {
               <div className="w-1.5 h-1.5 rounded-full bg-brand-aqua/10" />
             </div>
           </motion.div>
-        </div>
-
-        {/* Detailed Service Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-24">
-          {cards.map((card, idx) => (
-            <motion.div 
-              key={card.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: idx * 0.05 }}
-              className="bg-white/[0.03] border border-white/10 p-8 rounded-[24px] hover:bg-white/[0.06] hover:border-brand-aqua/30 transition-all duration-300 group relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-4 opacity-10 font-display text-[32px] group-hover:opacity-20 transition-opacity">
-                {card.id}
-              </div>
-              
-              <div className="w-12 h-12 rounded-2xl bg-brand-aqua flex items-center justify-center mb-6 shadow-[0_10px_20px_rgba(0,229,255,0.2)]">
-                {card.icon}
-              </div>
-              
-              <h4 className="text-[22px] text-white mb-3 tracking-tight group-hover:text-brand-aqua transition-colors">
-                {card.title}
-              </h4>
-              <p className="text-white/50 text-[14px] font-light leading-relaxed">
-                {card.desc}
-              </p>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>

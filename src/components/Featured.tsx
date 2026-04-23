@@ -33,7 +33,7 @@ function useCounter(target: number, duration: number = 1800, decimal: number = 0
 
 export default function Featured() {
   return (
-    <section className="py-20 lg:py-24 bg-brand-navy relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-brand-navy relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_1.05fr] gap-12 lg:gap-20 items-center">
         
         <motion.div 

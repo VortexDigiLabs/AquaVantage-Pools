@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Testimonials() {
   return (
-    <section className="py-20 lg:py-24 bg-brand-navy" id="testimonials">
+    <section className="py-12 lg:py-16 bg-brand-navy" id="testimonials">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center max-w-[720px] mx-auto mb-[60px]">
           <motion.span 
