@@ -19,7 +19,7 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.75, delay: 0.05, ease: [0.22, 0.68, 0, 1.2] }}
-            className="text-[clamp(36px,4.5vw,58px)] text-[#F5F5F0] my-4"
+            className="text-[32px] sm:text-[36px] md:text-[clamp(36px,4.5vw,58px)] text-[#F5F5F0] my-4 break-words hyphens-auto"
           >
             Trusted by <span className="serif-italic">route operators</span> across South Africa
           </motion.h2>

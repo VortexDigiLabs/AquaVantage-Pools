@@ -34,7 +34,7 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.75, delay: 0.05, ease: [0.22, 0.68, 0, 1.2] }}
-            className="text-[clamp(36px,4.5vw,58px)] text-white my-4"
+            className="text-[32px] sm:text-[36px] md:text-[clamp(36px,4.5vw,58px)] text-white my-4 break-words hyphens-auto"
           >
             A flowing, <span className="serif-italic">measured</span> handover
           </motion.h2>
