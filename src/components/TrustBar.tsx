@@ -30,7 +30,7 @@ function AnimatedCounter({ target, duration = 1800, decimal = 0, suffix = "", it
     requestAnimationFrame(update);
   }, [inView, target, duration, decimal, suffix, italicSuffix]);
 
-  return <div ref={nodeRef} className="font-serif text-[52px] text-brand-ink leading-none mt-1" />;
+  return <div ref={nodeRef} className="font-serif text-[36px] sm:text-[44px] md:text-[52px] text-brand-ink leading-none mt-1" />;
 }
 
 export default function TrustBar() {

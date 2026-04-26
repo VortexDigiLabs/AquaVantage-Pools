@@ -35,7 +35,7 @@ export default function Testimonials() {
             className="bg-brand-deep border border-brand-line p-[40px_34px] rounded-[22px] relative transition-all duration-400 overflow-hidden hover:-translate-y-1.5 hover:border-brand-aqua group"
           >
             <div className="text-brand-aqua text-[14px] mb-4 tracking-[2px] relative z-10">★★★★★</div>
-            <div className="font-serif text-[48px] text-brand-aqua leading-none absolute top-[30px] right-[30px]">"</div>
+            <div className="font-serif text-[40px] md:text-[48px] text-brand-aqua leading-none absolute top-[30px] right-[30px]">"</div>
             <p className="font-serif italic text-[19px] text-[#F5F5F0] mb-[26px] leading-relaxed relative z-10">
               "We moved our 120-pool book onto AquaVantage and cut our weekly fuel bill by a third. Client retention is the highest it's ever been."
             </p>
@@ -58,7 +58,7 @@ export default function Testimonials() {
             className="bg-brand-deep border border-brand-line p-[40px_34px] rounded-[22px] relative transition-all duration-400 overflow-hidden hover:-translate-y-1.5 hover:border-brand-aqua group"
           >
             <div className="text-brand-aqua text-[14px] mb-4 tracking-[2px] relative z-10">★★★★★</div>
-            <div className="font-serif text-[48px] text-brand-aqua leading-none absolute top-[30px] right-[30px]">"</div>
+            <div className="font-serif text-[40px] md:text-[48px] text-brand-aqua leading-none absolute top-[30px] right-[30px]">"</div>
             <p className="font-serif italic text-[19px] text-[#F5F5F0] mb-[26px] leading-relaxed relative z-10">
               "Their green-pool recovery protocol saved three commercial handovers for us last summer. The compliance reports alone justify the contract."
             </p>
@@ -81,7 +81,7 @@ export default function Testimonials() {
             className="bg-brand-deep border border-brand-line p-[40px_34px] rounded-[22px] relative transition-all duration-400 overflow-hidden hover:-translate-y-1.5 hover:border-brand-aqua group"
           >
             <div className="text-brand-aqua text-[14px] mb-4 tracking-[2px] relative z-10">★★★★★</div>
-            <div className="font-serif text-[48px] text-brand-aqua leading-none absolute top-[30px] right-[30px]">"</div>
+            <div className="font-serif text-[40px] md:text-[48px] text-brand-aqua leading-none absolute top-[30px] right-[30px]">"</div>
             <p className="font-serif italic text-[19px] text-[#F5F5F0] mb-[26px] leading-relaxed relative z-10">
               "The route-optimisation tech is on another level. My four technicians now handle what used to take six — without sacrificing service quality."
             </p>

@@ -78,7 +78,7 @@ export default function Featured() {
           transition={{ duration: 0.75, ease: [0.22, 0.68, 0, 1.2] }}
         >
           <span className="eyebrow">Featured Programme</span>
-          <h2 className="text-[clamp(34px,4vw,52px)] text-brand-navy my-4">
+          <h2 className="text-[clamp(34px,4vw,52px)] text-brand-navy my-4 break-words hyphens-auto">
             The Commercial <span className="serif-italic">Maintenance Contract</span> — built for scale.
           </h2>
           <p className="text-brand-grey text-[16px] mb-[18px] font-light leading-relaxed">

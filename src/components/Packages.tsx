@@ -50,7 +50,7 @@ export default function Packages() {
           >
             <span className="text-[11px] tracking-[0.25em] uppercase text-brand-aqua">Tier I</span>
             <h3 className="text-[clamp(26px,2.5vw,32px)] mt-2.5 mb-2 leading-[1.1] font-medium text-white break-words hyphens-auto">Route Starter</h3>
-            <div className="font-serif text-[44px] my-[18px] leading-none text-white">
+            <div className="font-serif text-[36px] md:text-[44px] my-[18px] leading-none text-white">
               R 2,450<small className="font-sans text-[14px] opacity-60"> / mo</small>
             </div>
             <ul className="list-none flex-grow my-[22px] mb-[28px]">
@@ -86,7 +86,7 @@ export default function Packages() {
             <span className="absolute top-[22px] right-[22px] bg-brand-aqua text-[#F5F5F0] text-[10px] tracking-[0.2em] uppercase px-3 py-1.5 rounded-full">Most Selected</span>
             <span className="text-[11px] tracking-[0.25em] uppercase text-brand-aqua">Tier II</span>
             <h3 className="text-[clamp(26px,2.5vw,32px)] mt-2.5 mb-2 leading-[1.1] font-medium text-white break-words hyphens-auto pr-2">Professional Route</h3>
-            <div className="font-serif text-[44px] my-[18px] leading-none text-white">
+            <div className="font-serif text-[36px] md:text-[44px] my-[18px] leading-none text-white">
               R 5,900<small className="font-sans text-[14px] opacity-60"> / mo</small>
             </div>
             <ul className="list-none flex-grow my-[22px] mb-[28px]">
@@ -124,7 +124,7 @@ export default function Packages() {
           >
             <span className="text-[11px] tracking-[0.25em] uppercase text-brand-aqua">Tier III</span>
             <h3 className="text-[clamp(26px,2.5vw,32px)] mt-2.5 mb-2 leading-[1.1] font-medium text-white break-words hyphens-auto">Commercial Fleet</h3>
-            <div className="font-serif text-[44px] my-[18px] leading-none text-white">
+            <div className="font-serif text-[36px] md:text-[44px] my-[18px] leading-none text-white">
               Custom
             </div>
             <ul className="list-none flex-grow my-[22px] mb-[28px]">
