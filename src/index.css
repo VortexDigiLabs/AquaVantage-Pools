@@ -22,11 +22,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   body {
     @apply font-sans text-brand-ink bg-brand-navy;
     line-height: 1.65;
     overflow-x: hidden;
+    width: 100%;
     -webkit-font-smoothing: antialiased;
   }
   h1, h2, h3, h4, .serif {

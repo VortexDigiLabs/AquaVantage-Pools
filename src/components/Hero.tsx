@@ -4,7 +4,7 @@ import { Crosshair, RefreshCcw, Droplets } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-x-clip flex items-center pt-[120px] pb-[40px]">
+    <section className="relative min-h-[100svh] overflow-x-hidden flex items-center pt-[120px] pb-[40px] bg-[#051422]">
       {/* Video Background */}
       <video 
         src="https://bxmgsjtsxygxfgvpnnjh.supabase.co/storage/v1/object/public/PoolWebsite%20Template/Swimmer%201%20WebM.webm" 
@@ -13,7 +13,9 @@ export default function Hero() {
         muted 
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover z-0 brightness-[1.1] contrast-[1.15] saturate-[1.3] transform-gpu" 
+        className="absolute inset-0 w-full h-full object-cover z-0 brightness-[1.1] contrast-[1.15] saturate-[1.3] transform-gpu transition-opacity duration-1000" 
+        onLoadedData={(e) => { e.currentTarget.style.opacity = '1'; }}
+        style={{ opacity: 0 }}
       />
 
       {/* Overlay Layers for Readability and Premium Vibe */}
@@ -36,7 +38,7 @@ export default function Hero() {
         <div><div className="text-[11px] tracking-widest uppercase opacity-70">Routes Optimised</div><div className="font-serif text-[22px] font-medium leading-none mt-1">312 Wk.</div></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-40 w-full">
+      <div className="max-w-7xl mx-auto px-5 md:px-6 relative z-40 w-full">
         <div className="max-w-[1000px] text-left">
           <div>
             <motion.span 
@@ -52,7 +54,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 36 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.15, ease: [0.22, 0.68, 0, 1.2] }}
-              className="text-[clamp(40px,5.8vw,90px)] text-white mt-[12px] mb-[24px] font-black uppercase italic leading-[1.1] tracking-tight font-display drop-shadow-[0_4px_16px_rgba(0,0,0,0.15)] py-2"
+              className="text-[34px] sm:text-[40px] md:text-[clamp(44px,5.8vw,90px)] text-white mt-[12px] mb-[24px] font-black uppercase italic leading-[1.1] tracking-tight font-display drop-shadow-[0_4px_16px_rgba(0,0,0,0.15)] py-2 break-words"
             >
               Run a sharper,<br/> <span className="italic font-black text-transparent stroke-text font-display drop-shadow-none">more profitable</span><br/> pool service <br/> operation.
             </motion.h1>

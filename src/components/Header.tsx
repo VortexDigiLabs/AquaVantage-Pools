@@ -32,15 +32,15 @@ export default function Header() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
           scrolled
             ? 'bg-brand-navy/90 backdrop-blur-md py-4 shadow-[0_2px_40px_rgba(0,0,0,0.3)]'
             : 'bg-transparent py-6'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-8 flex items-center justify-between">
-          <a href="#" className="font-serif text-[26px] font-semibold text-white tracking-widest flex items-center gap-2.5 no-underline group hover:opacity-90 transition-opacity">
-            <span className="w-8 h-8 rounded-full bg-brand-aqua relative shrink-0 transition-transform duration-400 group-hover:rotate-90 before:content-[''] before:absolute before:inset-[7px] before:rounded-full before:border-[1.5px] before:border-[#1a1a1a]" />
+        <div className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between">
+          <a href="#" className="font-serif text-[22px] md:text-[26px] font-semibold text-white tracking-widest flex items-center gap-2 md:gap-2.5 no-underline group hover:opacity-90 transition-opacity whitespace-nowrap">
+            <span className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-brand-aqua relative shrink-0 transition-transform duration-400 group-hover:rotate-90 before:content-[''] before:absolute before:inset-[5px] md:before:inset-[7px] before:rounded-full before:border-[1.5px] before:border-[#1a1a1a]" />
             AquaVantage
           </a>
 
@@ -89,37 +89,37 @@ export default function Header() {
       <AnimatePresence>
         {menuOpen && (
            <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#051422]/95 backdrop-blur-xl flex flex-col items-center justify-center pointer-events-auto"
+            className="fixed inset-0 z-[90] bg-[#051422] flex flex-col items-center justify-center pointer-events-auto"
           >
-            <ul className="text-center list-none p-0 m-0 w-full px-8">
+            <ul className="text-center list-none p-0 m-0 w-full px-8 flex flex-col gap-8">
               {navLinks.map((link) => (
-                <li key={link.name} className="py-4 border-b border-white/5">
+                <li key={link.name} className="py-2">
                   <a
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className="text-white font-serif text-4xl tracking-wide hover:text-brand-aqua-light transition-colors block"
+                    className="text-white/90 font-sans text-[24px] font-medium tracking-[0.05em] hover:text-brand-aqua transition-colors block"
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="flex gap-4 mt-10 justify-center flex-wrap px-8">
+            <div className="flex flex-col gap-4 mt-12 w-full max-w-[280px] px-8">
               <a
                 href="#contact"
                 onClick={() => setMenuOpen(false)}
-                className="bg-brand-aqua text-black px-[26px] py-3 rounded-full text-[13px] font-bold uppercase tracking-[0.08em]"
+                className="bg-brand-aqua text-black px-6 py-4 rounded-full text-[14px] font-bold uppercase tracking-[0.08em] text-center transition-transform active:scale-95"
               >
                 Request Demo
               </a>
               <a
                  href="#contact"
                  onClick={() => setMenuOpen(false)}
-                 className="border border-white/40 text-white bg-transparent px-[26px] py-3 rounded-full text-[13px] font-medium tracking-[0.06em]"
+                 className="border border-white/30 text-white bg-transparent px-6 py-4 rounded-full text-[14px] font-medium tracking-[0.06em] text-center transition-transform active:scale-95"
               >
                 WhatsApp
               </a>
